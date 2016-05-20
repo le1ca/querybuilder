@@ -38,7 +38,7 @@ def main():
         );
         
         CREATE TABLE notes (
-            nid      INTEGER PRIAMRY KEY,
+            nid      INTEGER PRIMARY KEY,
             owner    INTEGER,
             content  TEXT,
             FOREIGN KEY (owner) REFERENCES users (uid)
@@ -78,7 +78,7 @@ def main():
     for (username, content) in q.fetch():
         print("%s: %s" % (username, content))
     
-    print("-" * 20)
+    print("\n" + "-" * 20 + "\n")
     
     # select all notes, 2 at a time
     v = None
